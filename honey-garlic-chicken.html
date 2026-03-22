@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Sanch | Honey Garlic Glazed Chicken</title>
+    <style>
+        :root {
+            --primary: #e67e22; /* Golden Honey Orange */
+            --secondary: #2c3e50;
+            --accent: #f1c40f;
+            --bg: #f4f7f6;
+            --nutrition-bg: #fef9e7;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #444; max-width: 800px; margin: 0 auto; padding: 20px; background: var(--bg); }
+        .back-nav { margin-bottom: 20px; }
+        .back-nav a { text-decoration: none; color: var(--secondary); font-weight: bold; }
+
+        .recipe-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .hero-image { width: 100%; height: 300px; object-fit: cover; }
+        .content { padding: 40px; }
+
+        h1 { color: var(--primary); margin-top: 0; font-size: 2.5rem; margin-bottom: 10px; }
+        
+        .intro-text { font-size: 1.1rem; color: #555; margin-bottom: 25px; line-height: 1.8; }
+        
+        .health-benefits { background: #fdf2e9; padding: 15px 20px; border-radius: 8px; margin-bottom: 25px; border-left: 5px solid var(--primary); }
+        .health-benefits h4 { margin: 0 0 5px 0; color: #d35400; text-transform: uppercase; font-size: 0.85rem; }
+
+        .nutrition-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+            gap: 15px; 
+            background: var(--nutrition-bg); 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .num-val { display: block; font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .num-label { font-size: 0.8rem; text-transform: uppercase; color: #7f8c8d; }
+
+        .section-title { border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        .ingredients-list { list-style: none; padding: 0; margin-bottom: 40px; }
+        .ingredients-list li { margin-bottom: 10px; padding: 10px; background: #fffdf5; border-radius: 8px; border: 1px solid #f9ebbe; }
+        .step { margin-bottom: 50px; }
+        .step h3 { color: var(--secondary); display: flex; align-items: center; }
+        .step h3 span { background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; margin-right: 15px; }
+        .step-img { width: 100%; border-radius: 10px; margin: 15px 0; }
+        .serving-suggestion { background: #fef9e7; padding: 20px; border-left: 5px solid var(--accent); border-radius: 5px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <nav class="back-nav">
+        <a href="index.html">← BACK TO COOKBOOK</a>
+    </nav>
+
+    <article class="recipe-card">
+        <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80" alt="Honey Garlic Chicken" class="hero-image">
+        
+        <div class="content">
+            <h1>🍗 Honey Garlic Glazed Chicken</h1>
+            
+            <p class="intro-text">
+                The magic of this dish lies in the <em>Maillard reaction</em>—the browning of the chicken combined with the caramelization of raw honey. It creates a sticky, umami-rich glaze that coats the protein perfectly. This is a 15-minute deployment that beats takeout every single time.
+            </p>
+
+            <div class="health-benefits">
+                <h4>🌿 Why this is good for you</h4>
+                <p style="margin: 0; font-size: 0.95rem;">
+                    Garlic contains <strong>allicin</strong>, known for its immune-boosting properties. Using honey provides a natural energy source, and when paired with lean chicken breast, you get a high-protein meal that keeps you satiated without the heavy oils found in processed glazes.
+                </p>
+            </div>
+
+            <div class="nutrition-grid">
+                <div class="stat">
+                    <span class="num-val">320</span>
+                    <span class="num-label">Calories</span>
+                </div>
+                <div class="stat">
+                    <span class="num-val">34g</span>
+                    <span class="num-label">Protein</span>
+                </div>
+                <div class="stat">
+                    <span class="num-val">24g</span>
+                    <span class="num-label">Carbs</span>
+                </div>
+                <div class="stat">
+                    <span class="num-val">8g</span>
+                    <span class="num-label">Fat</span>
+                </div>
+            </div>
+
+            <h2 class="section-title">Ingredients</h2>
+            <ul class="ingredients-list">
+                <li><input type="checkbox"> 1 lb Chicken Breast (cut into 1-inch pieces)</li>
+                <li><input type="checkbox"> 2 tbsp All-purpose Flour</li>
+                <li><input type="checkbox"> 1/3 cup Honey</li>
+                <li><input type="checkbox"> 2 tbsp Soy Sauce (Low Sodium)</li>
+                <li><input type="checkbox"> 1 tbsp Apple Cider Vinegar</li>
+                <li><input type="checkbox"> 3-4 cloves Garlic (minced)</li>
+                <li><input type="checkbox"> Optional: Ginger, Sesame Seeds, Green Onions</li>
+            </ul>
+
+            <h2 class="section-title">Step-by-Step Instructions</h2>
+
+            <div class="step">
+                <h3><span>1</span> Prep and Coat</h3>
+                <p>Pat chicken dry with paper towels. Toss in a bowl with flour, salt, and pepper until lightly coated. This creates the "anchor" for our sauce to stick to.</p>
+                <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=800&q=80" class="step-img">
+            </div>
+
+            <div class="step">
+                <h3><span>2</span> Whisk the Glaze</h3>
+                <p>In a small bowl, combine honey, soy sauce, vinegar, garlic, and ginger. Whisk until smooth.</p>
+                
+            </div>
+
+            <div class="step">
+                <h3><span>3</span> Sear the Protein</h3>
+                <p>Heat oil in a skillet over medium-high. Brown chicken for 3-4 minutes per side until golden. Work in batches to avoid crowding!</p>
+                <img src="https://images.unsplash.com/photo-1632778149975-420e0e75ee0d?auto=format&fit=crop&w=800&q=80" class="step-img">
+            </div>
+
+            <div class="step">
+                <h3><span>4</span> Glaze and Thicken</h3>
+                <p>Lower heat to medium. Pour sauce over chicken. Let it bubble for 2-4 minutes until it transforms into a thick, shiny glaze.</p>
+                <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=800&q=80" class="step-img">
+            </div>
+
+            <div class="serving-suggestion">
+                <strong>🍚 Serving Suggestion:</strong> Best served over a steaming bed of jasmine rice with a sprinkle of toasted sesame seeds and chopped green onions.
+            </div>
+        </div>
+    </article>
+
+    <footer style="text-align: center; margin-top: 40px; color: #888; font-size: 0.8rem; padding-bottom: 40px;">
+        &copy; 2026 Sancho's Cookbook | Built with Chef Sanch
+    </footer>
+
+</body>
+</html>
