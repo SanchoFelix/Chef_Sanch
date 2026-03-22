@@ -10,83 +10,46 @@
             --secondary: #2c3e50;
             --accent: #27ae60;
             --bg: #f4f7f6;
+            --nutrition-bg: #fdf2e9;
         }
 
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            color: #444; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 20px; 
-            background: var(--bg); 
-        }
-
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #444; max-width: 800px; margin: 0 auto; padding: 20px; background: var(--bg); }
         .back-nav { margin-bottom: 20px; }
         .back-nav a { text-decoration: none; color: var(--secondary); font-weight: bold; }
 
-        .recipe-card { 
-            background: white; 
-            border-radius: 15px; 
-            overflow: hidden; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
-        }
-
-        .hero-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            background: #ddd;
-        }
-
+        .recipe-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .hero-image { width: 100%; height: 300px; object-fit: cover; }
         .content { padding: 40px; }
 
-        h1 { color: var(--primary); margin-top: 0; font-size: 2.5rem; }
-        .description { font-style: italic; color: #666; font-size: 1.1rem; margin-bottom: 30px; }
+        h1 { color: var(--primary); margin-top: 0; font-size: 2.5rem; margin-bottom: 10px; }
+        
+        /* New Sections: Intro & Nutrition */
+        .intro-text { font-size: 1.1rem; color: #555; margin-bottom: 25px; line-height: 1.8; }
+        
+        .health-benefits { background: #e8f6f3; padding: 15px 20px; border-radius: 8px; margin-bottom: 25px; border-left: 5px solid var(--accent); }
+        .health-benefits h4 { margin: 0 0 5px 0; color: #16a085; text-transform: uppercase; font-size: 0.85rem; }
 
-        .section-title { 
-            border-bottom: 2px solid var(--primary); 
-            display: inline-block; 
-            margin-bottom: 20px; 
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .nutrition-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+            gap: 15px; 
+            background: var(--nutrition-bg); 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin-bottom: 40px;
+            text-align: center;
         }
+        .num-val { display: block; font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .num-label { font-size: 0.8rem; text-transform: uppercase; color: #7f8c8d; }
 
-        /* Ingredients Checklist */
+        .section-title { border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
         .ingredients-list { list-style: none; padding: 0; margin-bottom: 40px; }
         .ingredients-list li { margin-bottom: 10px; padding: 10px; background: #fffaf0; border-radius: 8px; }
-        .ingredients-list input { margin-right: 15px; transform: scale(1.2); }
-
-        /* Step Styles */
         .step { margin-bottom: 50px; }
         .step h3 { color: var(--secondary); display: flex; align-items: center; }
-        .step h3 span { 
-            background: var(--primary); 
-            color: white; 
-            width: 30px; 
-            height: 30px; 
-            border-radius: 50%; 
-            display: inline-flex; 
-            justify-content: center; 
-            align-items: center; 
-            margin-right: 15px;
-            font-size: 0.9rem;
-        }
-
-        .step-img { 
-            width: 100%; 
-            border-radius: 10px; 
-            margin: 15px 0; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        }
-
-        .serving-suggestion {
-            background: #e8f5e9;
-            padding: 20px;
-            border-left: 5px solid var(--accent);
-            border-radius: 5px;
-            margin-top: 40px;
-        }
+        .step h3 span { background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; margin-right: 15px; }
+        .step-img { width: 100%; border-radius: 10px; margin: 15px 0; }
+        .serving-suggestion { background: #e8f5e9; padding: 20px; border-left: 5px solid var(--accent); border-radius: 5px; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -96,12 +59,40 @@
     </nav>
 
     <article class="recipe-card">
-        <!-- Main Hero Image -->
         <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=800&q=80" alt="Sausage and Peppers" class="hero-image">
         
         <div class="content">
             <h1>🍳 Rustic Skillet Sausage & Peppers</h1>
-            <p class="description">A savory, caramelized blend of juicy sausages and tender-crisp peppers. Perfect on its own, in a hoagie roll, or over a bed of rice.</p>
+            
+            <p class="intro-text">
+                This classic Italian-American staple is the ultimate weeknight "win." By searing the sausages whole first, we lock in the juices, while the green peppers and onions caramelize in the rendered fats to create a natural, rich sauce. It's a colorful, fragrant dish that feels fancy but only requires one pan and basic kitchen skills.
+            </p>
+
+            <div class="health-benefits">
+                <h4>🌿 Why this is good for you</h4>
+                <p style="margin: 0; font-size: 0.95rem;">
+                    Green peppers are a massive source of <strong>Vitamin C</strong> (even more than oranges!) and antioxidants. Using onions and garlic provides prebiotic fiber to support gut health. For a leaner version, chicken or turkey Italian sausages offer high protein with lower saturated fat.
+                </p>
+            </div>
+
+            <div class="nutrition-grid">
+                <div class="stat">
+                    <span class="num-val">380</span>
+                    <span class="num-label">Calories</span>
+                </div>
+                <div class="stat">
+                    <span class="num-val">22g</span>
+                    <span class="num-label">Protein</span>
+                </div>
+                <div class="stat">
+                    <span class="num-val">12g</span>
+                    <span class="num-label">Carbs</span>
+                </div>
+                <div class="stat">
+                    <span class="num-val">28g</span>
+                    <span class="num-label">Fat</span>
+                </div>
+            </div>
 
             <h2 class="section-title">Ingredients</h2>
             <ul class="ingredients-list">
@@ -110,47 +101,41 @@
                 <li><input type="checkbox"> Onion (1 medium, sliced into half-moons)</li>
                 <li><input type="checkbox"> Garlic (2-3 cloves, minced)</li>
                 <li><input type="checkbox"> Olive Oil (2 tbsp)</li>
-                <li><input type="checkbox"> Red Pepper Flakes (Optional)</li>
-                <li><input type="checkbox"> Salt & Black Pepper (to taste)</li>
+                <li><input type="checkbox"> Red Pepper Flakes, Salt & Black Pepper</li>
             </ul>
 
             <h2 class="section-title">Step-by-Step Instructions</h2>
-
-            <!-- Step 1 -->
             <div class="step">
                 <h3><span>1</span> Sear the Sausages</h3>
-                <p>Place a large skillet over medium-high heat with 1 tablespoon of olive oil. Add the whole sausages. Cook for 5-7 minutes, turning occasionally, until they are browned on all sides. They don't need to be fully cooked through yet.</p>
-                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=800&q=80" alt="Searing Sausages" class="step-img">
+                <p>Place a large skillet over medium-high heat with 1 tablespoon of olive oil. Add the whole sausages. Cook for 5-7 minutes until browned. Set aside.</p>
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=800&q=80" class="step-img">
             </div>
 
-            <!-- Step 2 -->
             <div class="step">
                 <h3><span>2</span> Sauté the Aromatics</h3>
-                <p>Remove the sausages from the pan and set them aside on a plate. In the same pan (keep those flavorful juices!), add the remaining oil, the sliced green peppers, and the onions. Sauté for about 6-8 minutes until the edges are softened and slightly charred.</p>
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Sautéing Vegetables" class="step-img">
+                <p>Add remaining oil and sauté peppers and onions for 6-8 minutes until soft and slightly charred.</p>
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" class="step-img">
             </div>
 
-            <!-- Step 3 -->
             <div class="step">
                 <h3><span>3</span> Combine and Simmer</h3>
-                <p>Stir in the minced garlic and red pepper flakes (if using). Sauté for 1 minute until fragrant. Slice the browned sausages into 1-inch coins and add them back into the skillet.</p>
-                <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="Combining Ingredients" class="step-img">
+                <p>Add garlic, slice sausages into coins, and return to pan. Toss well.</p>
+                <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" class="step-img">
             </div>
 
-            <!-- Step 4 -->
             <div class="step">
                 <h3><span>4</span> The Final Melt</h3>
-                <p>Turn the heat down to medium-low. Season with salt and pepper. Cover the pan and let it cook for another 5 minutes to ensure the sausages are cooked through and the flavors have married together.</p>
-                <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=800&q=80" alt="Finished Dish" class="step-img">
+                <p>Cover and simmer for 5 minutes. Season to taste and serve hot.</p>
+                <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=800&q=80" class="step-img">
             </div>
 
             <div class="serving-suggestion">
-                <strong>🥖 Serving Suggestion:</strong> This is incredible served inside a toasted sub roll with a little provolone cheese, or kept "low-carb" by eating it straight out of a bowl with a fork.
+                <strong>🥖 Serving Suggestion:</strong> Serve in a toasted roll with provolone, or over cauliflower rice for a low-carb masterpiece.
             </div>
         </div>
     </article>
 
-    <footer style="text-align: center; margin-top: 40px; color: #888; font-size: 0.8rem;">
+    <footer style="text-align: center; margin-top: 40px; color: #888; font-size: 0.8rem; padding-bottom: 40px;">
         &copy; 2026 My Digital Cookbook | Built with Chef Sanch
     </footer>
 
