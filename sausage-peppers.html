@@ -18,7 +18,7 @@
         .back-nav a { text-decoration: none; color: var(--secondary); font-weight: bold; }
 
         .recipe-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .hero-image { width: 100%; height: 400px; object-fit: cover; }
+        .hero-image { width: 100%; height: 450px; object-fit: cover; }
         .content { padding: 40px; }
 
         h1 { color: var(--primary); margin-top: 0; font-size: 2.5rem; margin-bottom: 10px; }
@@ -51,11 +51,17 @@
         .step-img-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 15px;
             margin: 15px 0;
         }
-        .step-img { width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .full-img { grid-column: span 2; }
+        .step-img { 
+            width: 100%; 
+            height: 300px; /* Forces consistent height for vertical shots */
+            object-fit: cover; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+        .full-img { grid-column: span 2; height: auto; }
 
         .serving-suggestion { background: #e8f5e9; padding: 20px; border-left: 5px solid var(--accent); border-radius: 5px; margin-top: 40px; }
     </style>
@@ -67,19 +73,19 @@
     </nav>
 
     <article class="recipe-card">
-        <img src="IMG_8067.jpg" alt="Final Sausage and Peppers" class="hero-image">
+        <img src="Images/IMG_8067.jpg" alt="Final Sausage and Peppers" class="hero-image">
         
         <div class="content">
             <h1>🍳 Rustic Skillet Sausage & Peppers</h1>
             
             <p class="intro-text">
-                This classic Italian-American staple is the ultimate weeknight "win." By searing the sausages whole first, we lock in the juices, while the green peppers and onions caramelize in the rendered fats to create a natural, rich sauce.
+                This classic Italian-American staple is the ultimate weeknight "win." By searing the sausages whole first, we lock in the juices, while the peppers and onions caramelize in the rendered fats to create a natural, rich sauce.
             </p>
 
             <div class="health-benefits">
                 <h4>🌿 Why this is good for you</h4>
                 <p style="margin: 0; font-size: 0.95rem;">
-                    Green peppers are a massive source of <strong>Vitamin C</strong>. Adding fresh jalapeños (like in Sancho's version) provides capsaicin, which can boost metabolism and heart health.
+                    Green peppers are a massive source of <strong>Vitamin C</strong>. Adding fresh jalapeños provides capsaicin, which can boost metabolism and heart health.
                 </p>
             </div>
 
@@ -96,7 +102,7 @@
                 <li><input type="checkbox"> Green Bell Peppers (2 large)</li>
                 <li><input type="checkbox"> Onion (1 large yellow)</li>
                 <li><input type="checkbox"> Garlic (Minced)</li>
-                <li><input type="checkbox"> 🌶️ Jalapeños (Sancho's Special Add)</li>
+                <li><input type="checkbox"> 🌶️ Jalapeños</li>
             </ul>
 
             <h2 class="section-title">Step-by-Step Instructions</h2>
@@ -105,8 +111,8 @@
                 <h3><span>1</span> Prep and Sear</h3>
                 <p>Slice the onions and peppers into strips. Sear the sausages whole for 5-7 minutes until they have a beautiful golden crust.</p>
                 <div class="step-img-container">
-                    <img src="IMG_8060.jpg" class="step-img" alt="Prep Ingredients">
-                    <img src="IMG_8061.jpg" class="step-img" alt="Searing Sausages">
+                    <img src="Images/IMG_8060.jpg" class="step-img" alt="Prep Ingredients">
+                    <img src="Images/IMG_8061.jpg" class="step-img" alt="Searing Sausages">
                 </div>
             </div>
 
@@ -114,8 +120,8 @@
                 <h3><span>2</span> Sauté the Aromatics</h3>
                 <p>Remove sausages. Toss in the peppers, onions, and jalapeños. Sauté until softened and charred.</p>
                 <div class="step-img-container">
-                    <img src="IMG_8062.jpg" class="step-img" alt="Chopped Veggies">
-                    <img src="IMG_8063.jpg" class="step-img" alt="Sautéing">
+                    <img src="Images/IMG_8062.jpg" class="step-img" alt="Chopped Veggies">
+                    <img src="Images/IMG_8063.jpg" class="step-img" alt="Sautéing">
                 </div>
             </div>
 
@@ -123,15 +129,15 @@
                 <h3><span>3</span> Flavor Integration</h3>
                 <p>Add the minced garlic to the center of the pan until fragrant. Slice the sausages into coins and reintroduce them to the skillet.</p>
                 <div class="step-img-container">
-                    <img src="IMG_8065.jpg" class="step-img" alt="Adding Garlic">
-                    <img src="IMG_8066.jpg" class="step-img" alt="Adding Sausage Coins">
+                    <img src="Images/IMG_8065.jpg" class="step-img" alt="Adding Garlic">
+                    <img src="Images/IMG_8066.jpg" class="step-img" alt="Adding Sausage Coins">
                 </div>
             </div>
 
             <div class="step">
                 <h3><span>4</span> The Final Simmer</h3>
                 <p>Let everything cook together for 5 minutes until the sauce coats every piece of sausage and pepper.</p>
-                <img src="IMG_8067.jpg" class="step-img full-img" alt="Finished Dish">
+                <img src="Images/IMG_8067.jpg" class="step-img full-img" alt="Finished Dish">
             </div>
 
             <div class="serving-suggestion">
