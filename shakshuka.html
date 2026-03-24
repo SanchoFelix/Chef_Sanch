@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chickpea Shakshuka | Sancho’s Cookbook</title>
+    <style>
+        :root {
+            --primary: #d35400; /* Deep Orange */
+            --secondary: #2c3e50;
+            --accent: #f39c12;
+            --bg: #fdfaf6;
+            --text: #333;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        .hero { height: 40vh; background: url('Images/shakshuka-hero.jpg') center/cover no-repeat; display: flex; align-items: flex-end; }
+        .hero-title { background: rgba(0,0,0,0.6); color: white; width: 100%; padding: 20px; box-sizing: border-box; }
+        
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        
+        /* Nutrition Grid */
+        .nutrition-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px 0; text-align: center; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 15px; }
+        .nutri-item span { display: block; font-weight: bold; color: var(--primary); }
+
+        .health-callout { background: #e8f5e9; border-left: 5px solid #2e7d32; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+
+        .checklist { list-style: none; padding: 0; }
+        .checklist li { margin-bottom: 10px; display: flex; align-items: center; }
+        .checklist input { margin-right: 15px; accent-color: var(--primary); width: 20px; height: 20px; }
+
+        .steps { padding: 0; }
+        .step { margin-bottom: 30px; list-style: none; }
+        .step-header { display: flex; align-items: center; font-size: 1.2rem; font-weight: bold; color: var(--primary); margin-bottom: 10px; }
+        .step-icon { background: var(--primary); color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.9rem; }
+        .step img { width: 100%; border-radius: 8px; margin-top: 10px; border: 1px solid #ddd; }
+
+        .tips { background: #fff3e0; padding: 20px; border-radius: 8px; border: 1px dashed var(--accent); }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-title">
+        <h1>One-Pan Chickpea Shakshuka</h1>
+        <p>A rustic, 30-minute high-protein poach. Rustic vibes, modern performance.</p>
+    </div>
+</div>
+
+<div class="container">
+    <h2>The Macro-Stack</h2>
+    <div class="nutrition-grid">
+        <div class="nutri-item"><span>380</span>Calories</div>
+        <div class="nutri-item"><span>18g</span>Protein</div>
+        <div class="nutri-item"><span>42g</span>Carbs</div>
+        <div class="nutri-item"><span>14g</span>Fat</div>
+    </div>
+
+    <div class="health-callout">
+        <strong>💪 Health Benefits:</strong> This dish is a plant-based protein powerhouse. The simmered tomatoes are rich in <strong>Lycopene</strong>, a potent antioxidant that becomes more bioavailable when cooked with the healthy fats in olive oil.
+    </div>
+
+    <h3>Ingredients Checklist</h3>
+    <ul class="checklist">
+        <li><input type="checkbox"> 1 Onion (diced)</li>
+        <li><input type="checkbox"> 1 Red bell pepper (diced)</li>
+        <li><input type="checkbox"> 2 cloves Garlic (minced)</li>
+        <li><input type="checkbox"> 1 can (15 oz) Chickpeas (drained)</li>
+        <li><input type="checkbox"> 1 can (14 oz) Crushed tomatoes</li>
+        <li><input type="checkbox"> 1 tbsp Tomato paste</li>
+        <li><input type="checkbox"> 1 tsp Cumin & 1 tsp Smoked paprika</li>
+        <li><input type="checkbox"> 3-4 Large Eggs</li>
+        <li><input type="checkbox"> Feta cheese & Fresh Parsley</li>
+    </ul>
+
+    <h3>Implementation Steps</h3>
+    <div class="steps">
+        <li class="step">
+            <div class="step-header"><span class="step-icon">1</span>Sauté Veggies</div>
+            <p>Heat olive oil in a skillet over medium. Add onion, pepper, and garlic, cooking 4–5 minutes until soft. This builds our flavor base—think of it as setting up your environment variables.</p>
+            <img src="Images/shakshuka-step1.jpg" alt="Sautéing onions and peppers">
+        </li>
+        <li class="step">
+            <div class="step-header"><span class="step-icon">2</span>Simmer Sauce</div>
+            <p>Stir in spices, tomato paste, tomatoes, and chickpeas. Simmer for 5-10 minutes until the sauce thickens and the flavors integrate.</p>
+            <img src="Images/shakshuka-step2.jpg" alt="Simmering tomato sauce">
+        </li>
+        <li class="step">
+            <div class="step-header"><span class="step-icon">3</span>Poach Eggs</div>
+            <p>Create small wells in the sauce. Crack eggs into the wells, cover, and cook for 5-8 minutes until whites are set but yolks are still runny. Don't over-process here; let the steam do the work.</p>
+            <img src="Images/shakshuka-step3.jpg" alt="Poaching eggs in sauce">
+        </li>
+        <li class="step">
+            <div class="step-header"><span class="step-icon">4</span>Finish & Serve</div>
+            <p>Garnish with feta and fresh herbs. Serve with crusty bread for dipping. Deployment complete.</p>
+        </li>
+    </div>
+
+    <div class="tips">
+        <h4>💡 Pro-Tips for Success</h4>
+        <ul>
+            <li><strong>Substitutions:</strong> Use butter beans if chickpeas are out of stock.</li>
+            <li><strong>Heat:</strong> Add harissa paste for a spicy backend upgrade.</li>
+            <li><strong>Additions:</strong> Fold in spinach or kale just before adding the eggs.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
