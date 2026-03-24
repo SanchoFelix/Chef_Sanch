@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chef Sanch | Rustic Sausage & Peppers</title>
+    <title>Sancho's Cookbook | Rustic Sausage & Peppers</title>
     <style>
         :root {
             --primary: #d35400;
@@ -18,17 +18,14 @@
         .back-nav a { text-decoration: none; color: var(--secondary); font-weight: bold; }
 
         .recipe-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .hero-image { width: 100%; height: 300px; object-fit: cover; }
+        .hero-image { width: 100%; height: 400px; object-fit: cover; }
         .content { padding: 40px; }
 
         h1 { color: var(--primary); margin-top: 0; font-size: 2.5rem; margin-bottom: 10px; }
-        
-        /* New Sections: Intro & Nutrition */
         .intro-text { font-size: 1.1rem; color: #555; margin-bottom: 25px; line-height: 1.8; }
         
         .health-benefits { background: #e8f6f3; padding: 15px 20px; border-radius: 8px; margin-bottom: 25px; border-left: 5px solid var(--accent); }
-        .health-benefits h4 { margin: 0 0 5px 0; color: #16a085; text-transform: uppercase; font-size: 0.85rem; }
-
+        
         .nutrition-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
@@ -45,10 +42,21 @@
         .section-title { border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
         .ingredients-list { list-style: none; padding: 0; margin-bottom: 40px; }
         .ingredients-list li { margin-bottom: 10px; padding: 10px; background: #fffaf0; border-radius: 8px; }
+        
         .step { margin-bottom: 50px; }
         .step h3 { color: var(--secondary); display: flex; align-items: center; }
         .step h3 span { background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; margin-right: 15px; }
-        .step-img { width: 100%; border-radius: 10px; margin: 15px 0; }
+        
+        /* Grid for steps with two pictures */
+        .step-img-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .step-img { width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .full-img { grid-column: span 2; }
+
         .serving-suggestion { background: #e8f5e9; padding: 20px; border-left: 5px solid var(--accent); border-radius: 5px; margin-top: 40px; }
     </style>
 </head>
@@ -59,84 +67,81 @@
     </nav>
 
     <article class="recipe-card">
-        <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=800&q=80" alt="Sausage and Peppers" class="hero-image">
+        <img src="IMG_8067.jpg" alt="Final Sausage and Peppers" class="hero-image">
         
         <div class="content">
             <h1>🍳 Rustic Skillet Sausage & Peppers</h1>
             
             <p class="intro-text">
-                This classic Italian-American staple is the ultimate weeknight "win." By searing the sausages whole first, we lock in the juices, while the green peppers and onions caramelize in the rendered fats to create a natural, rich sauce. It's a colorful, fragrant dish that feels fancy but only requires one pan and basic kitchen skills.
+                This classic Italian-American staple is the ultimate weeknight "win." By searing the sausages whole first, we lock in the juices, while the green peppers and onions caramelize in the rendered fats to create a natural, rich sauce.
             </p>
 
             <div class="health-benefits">
                 <h4>🌿 Why this is good for you</h4>
                 <p style="margin: 0; font-size: 0.95rem;">
-                    Green peppers are a massive source of <strong>Vitamin C</strong> (even more than oranges!) and antioxidants. Using onions and garlic provides prebiotic fiber to support gut health. For a leaner version, chicken or turkey Italian sausages offer high protein with lower saturated fat.
+                    Green peppers are a massive source of <strong>Vitamin C</strong>. Adding fresh jalapeños (like in Sancho's version) provides capsaicin, which can boost metabolism and heart health.
                 </p>
             </div>
 
             <div class="nutrition-grid">
-                <div class="stat">
-                    <span class="num-val">380</span>
-                    <span class="num-label">Calories</span>
-                </div>
-                <div class="stat">
-                    <span class="num-val">22g</span>
-                    <span class="num-label">Protein</span>
-                </div>
-                <div class="stat">
-                    <span class="num-val">12g</span>
-                    <span class="num-label">Carbs</span>
-                </div>
-                <div class="stat">
-                    <span class="num-val">28g</span>
-                    <span class="num-label">Fat</span>
-                </div>
+                <div class="stat"><span class="num-val">380</span><span class="num-label">Calories</span></div>
+                <div class="stat"><span class="num-val">22g</span><span class="num-label">Protein</span></div>
+                <div class="stat"><span class="num-val">12g</span><span class="num-label">Carbs</span></div>
+                <div class="stat"><span class="num-val">28g</span><span class="num-label">Fat</span></div>
             </div>
 
             <h2 class="section-title">Ingredients</h2>
             <ul class="ingredients-list">
-                <li><input type="checkbox"> Italian Sausages (4-5 links)</li>
-                <li><input type="checkbox"> Green Bell Peppers (2 large, sliced into strips)</li>
-                <li><input type="checkbox"> Onion (1 medium, sliced into half-moons)</li>
-                <li><input type="checkbox"> Garlic (2-3 cloves, minced)</li>
-                <li><input type="checkbox"> Olive Oil (2 tbsp)</li>
-                <li><input type="checkbox"> Red Pepper Flakes, Salt & Black Pepper</li>
+                <li><input type="checkbox"> Italian Sausages (5 links)</li>
+                <li><input type="checkbox"> Green Bell Peppers (2 large)</li>
+                <li><input type="checkbox"> Onion (1 large yellow)</li>
+                <li><input type="checkbox"> Garlic (Minced)</li>
+                <li><input type="checkbox"> 🌶️ Jalapeños (Sancho's Special Add)</li>
             </ul>
 
             <h2 class="section-title">Step-by-Step Instructions</h2>
+
             <div class="step">
-                <h3><span>1</span> Sear the Sausages</h3>
-                <p>Place a large skillet over medium-high heat with 1 tablespoon of olive oil. Add the whole sausages. Cook for 5-7 minutes until browned. Set aside.</p>
-                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=800&q=80" class="step-img">
+                <h3><span>1</span> Prep and Sear</h3>
+                <p>Slice the onions and peppers into strips. Sear the sausages whole for 5-7 minutes until they have a beautiful golden crust.</p>
+                <div class="step-img-container">
+                    <img src="IMG_8060.jpg" class="step-img" alt="Prep Ingredients">
+                    <img src="IMG_8061.jpg" class="step-img" alt="Searing Sausages">
+                </div>
             </div>
 
             <div class="step">
                 <h3><span>2</span> Sauté the Aromatics</h3>
-                <p>Add remaining oil and sauté peppers and onions for 6-8 minutes until soft and slightly charred.</p>
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" class="step-img">
+                <p>Remove sausages. Toss in the peppers, onions, and jalapeños. Sauté until softened and charred.</p>
+                <div class="step-img-container">
+                    <img src="IMG_8062.jpg" class="step-img" alt="Chopped Veggies">
+                    <img src="IMG_8063.jpg" class="step-img" alt="Sautéing">
+                </div>
             </div>
 
             <div class="step">
-                <h3><span>3</span> Combine and Simmer</h3>
-                <p>Add garlic, slice sausages into coins, and return to pan. Toss well.</p>
-                <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" class="step-img">
+                <h3><span>3</span> Flavor Integration</h3>
+                <p>Add the minced garlic to the center of the pan until fragrant. Slice the sausages into coins and reintroduce them to the skillet.</p>
+                <div class="step-img-container">
+                    <img src="IMG_8065.jpg" class="step-img" alt="Adding Garlic">
+                    <img src="IMG_8066.jpg" class="step-img" alt="Adding Sausage Coins">
+                </div>
             </div>
 
             <div class="step">
-                <h3><span>4</span> The Final Melt</h3>
-                <p>Cover and simmer for 5 minutes. Season to taste and serve hot.</p>
-                <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=800&q=80" class="step-img">
+                <h3><span>4</span> The Final Simmer</h3>
+                <p>Let everything cook together for 5 minutes until the sauce coats every piece of sausage and pepper.</p>
+                <img src="IMG_8067.jpg" class="step-img full-img" alt="Finished Dish">
             </div>
 
             <div class="serving-suggestion">
-                <strong>🥖 Serving Suggestion:</strong> Serve in a toasted roll with provolone, or over cauliflower rice for a low-carb masterpiece.
+                <strong>🥖 Serving Suggestion:</strong> Your batch looks incredibly juicy—serve it over toasted sourdough or in a hoagie roll to soak up all those pan juices!
             </div>
         </div>
     </article>
 
     <footer style="text-align: center; margin-top: 40px; color: #888; font-size: 0.8rem; padding-bottom: 40px;">
-        &copy; 2026 My Digital Cookbook | Built with Chef Sanch
+        &copy; 2026 Sancho's Cookbook | Real Kitchen Build
     </footer>
 
 </body>
