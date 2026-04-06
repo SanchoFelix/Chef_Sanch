@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smashed Asian Cucumber Salad | Sancho’s Cookbook</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #d35400;
+            --secondary: #2c3e50;
+            --accent: #27ae60;
+            --bg: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--secondary);
+            margin: 0;
+            background: var(--bg);
+        }
+
+        .recipe-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #ddd;
+        }
+
+        h1 { color: var(--primary); margin-top: 20px; }
+
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            background: var(--secondary);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .benefit-callout {
+            border-left: 5px solid var(--accent);
+            background: #eafff2;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .checklist { list-style: none; padding: 0; }
+        .checklist li { margin-bottom: 10px; }
+        input[type="checkbox"] { accent-color: var(--primary); margin-right: 10px; }
+
+        .step { display: flex; gap: 15px; margin-bottom: 30px; align-items: flex-start; }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        
+        .step-img { width: 150px; border-radius: 8px; background: #eee; }
+
+        @media (max-width: 600px) {
+            .nutrition-grid { grid-template-columns: repeat(2, 1fr); }
+            .step { flex-direction: column; }
+            .step-img { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="recipe-container">
+    <img src="Images/cucumber-salad-hero.jpg" alt="Smashed Cucumber Salad" class="hero-img">
+    
+    <h1>Smashed Asian Cucumber Salad</h1>
+    <p class="vibe">A crisp, high-performance side dish with zero stovetop latency. Perfect for cooling down a spicy main build.</p>
+
+    <div class="nutrition-grid">
+        <div><strong>85</strong><br>Calories</div>
+        <div><strong>2g</strong><br>Protein</div>
+        <div><strong>9g</strong><br>Carbs</div>
+        <div><strong>5g</strong><br>Fat</div>
+    </div>
+
+    <div class="benefit-callout">
+        <strong>Chef's Note:</strong> This dish acts as nature's water-cooling system (hydration) with a spicy capsaicin kick to boost metabolic throughput.
+    </div>
+
+    <h3><span class="icon">🛒</span> Ingredients Checklist</h3>
+    <ul class="checklist">
+        <li><input type="checkbox"> 2 Large English Cucumbers</li>
+        <li><input type="checkbox"> 1 tsp Sea Salt (The Debugger)</li>
+        <li><input type="checkbox"> 2 tbsp Soy Sauce</li>
+        <li><input type="checkbox"> 1 tbsp Chinkiang Black Vinegar</li>
+        <li><input type="checkbox"> 1 tsp Toasted Sesame Oil</li>
+        <li><input type="checkbox"> 1 tbsp Chili Crisp</li>
+        <li><input type="checkbox"> 2 cloves Garlic, minced</li>
+    </ul>
+
+    <h3><span class="icon">👨‍🍳</span> Deployment Steps</h3>
+    
+    <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+            <p><strong>Smash Assets:</strong> Place cucumbers in a bag and hit them with a rolling pin until they split. Irregular edges hold more dressing.</p>
+            <img src="Images/step-1-smash.jpg" alt="Smashing Cucumbers" class="step-img">
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+            <p><strong>Drain Buffer:</strong> Toss with salt and let sit for 10 mins. Drain the excess liquid to prevent a "watery UI."</p>
+            <img src="Images/step-2-drain.jpg" alt="Draining Cucumbers" class="step-img">
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+            <p><strong>Inject Dependencies:</strong> Whisk the vinegar, soy sauce, oil, and chili crisp. Pour over cucumbers and serve cold.</p>
+            <img src="Images/step-3-mix.jpg" alt="Final Mix" class="step-img">
+        </div>
+    </div>
+
+    <center><a href="index.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">← Back to Hub</a></center>
+</div>
+
+</body>
+</html>
