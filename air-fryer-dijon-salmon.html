@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Fryer Dijon Salmon | Sancho’s Cookbook</title>
+    <style>
+        
+:root {
+    --primary: #d35400;
+    --secondary: #2c3e50;
+    --accent: #f39c12;
+    --background: #fdfbf7;
+    --text: #333;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Images/salmon-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: -50px auto 50px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.stat-box {
+    background: #f9f9f9;
+    padding: 15px;
+    border-bottom: 3px solid var(--primary);
+}
+
+.stat-val { font-weight: bold; font-size: 1.2rem; display: block; }
+.stat-label { font-size: 0.8rem; text-transform: uppercase; color: #777; }
+
+.health-callout {
+    background: #e8f4fd;
+    border-left: 5px solid #3498db;
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.ingredients-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.step {
+    margin-bottom: 30px;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.step-icon {
+    background: var(--primary);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    background: #eee;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: var(--primary);
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Air Fryer Dijon Salmon</h1>
+    <p>The "Dijon-Glazed Tech Stack": High-speed flavor deployment with a mustard-middleware crust.</p>
+</header>
+
+<div class="container">
+    <div class="nutrition-grid">
+        <div class="stat-box"><span class="stat-val">395</span><span class="stat-label">Calories</span></div>
+        <div class="stat-box"><span class="stat-val">34g</span><span class="stat-label">Protein</span></div>
+        <div class="stat-box"><span class="stat-val">3g</span><span class="stat-label">Carbs</span></div>
+        <div class="stat-box"><span class="stat-val">25g</span><span class="stat-label">Fat</span></div>
+    </div>
+
+    <div class="health-callout">
+        <strong>Health Benefits:</strong> Mustard seeds contain glucosinolates, which provide a "firewall" against cellular inflammation.
+    </div>
+
+    <h2>Ingredients</h2>
+    <ul class="ingredients-list">
+        <li><input type="checkbox"> 2 Salmon Fillets (6oz each)</li>
+        <li><input type="checkbox"> 1.5 tbsp Dijon Mustard</li>
+        <li><input type="checkbox"> 1 tsp Honey or Maple Syrup</li>
+        <li><input type="checkbox"> 1/2 tsp Garlic Powder</li>
+        <li><input type="checkbox"> 1/4 tsp Smoked Paprika</li>
+        <li><input type="checkbox"> Fresh Parsley, chopped</li>
+        <li><input type="checkbox"> Salt & Black Pepper to taste</li>
+    </ul>
+
+    <h2>Instructions</h2>
+
+    <div class="step">
+        <div class="step-header"><span class="step-icon">1</span> Initialize Environment</div>
+        <p>Preheat the air fryer to 400°F (200°C). Ensuring the hardware is warm before execution prevents sticking.</p>
+        <img src="Images/air-fryer-preheat.jpg" alt="Preheating air fryer">
+    </div>
+
+    <div class="step">
+        <div class="step-header"><span class="step-icon">2</span> The Middleware Mix</div>
+        <p>Whisk together Dijon, honey, garlic powder, and paprika in a small bowl until the consistency is smooth.</p>
+        <img src="Images/dijon-glaze-prep.jpg" alt="Mixing dijon glaze">
+    </div>
+
+    <div class="step">
+        <div class="step-header"><span class="step-icon">3</span> The API Call</div>
+        <p>Pat salmon dry and season with salt/pepper. Brush a thick layer of the glaze over the top of each fillet.</p>
+        <img src="Images/glazing-salmon.jpg" alt="Applying glaze to salmon">
+    </div>
+
+    <div class="step">
+        <div class="step-header"><span class="step-icon">4</span> Execution & Final Render</div>
+        <p>Air fry for 8–10 minutes. Garnish with parsley and let rest for 2 minutes before serving.</p>
+        <img src="Images/finished-salmon.jpg" alt="Finished salmon">
+    </div>
+</div>
+
+</body>
+</html>
